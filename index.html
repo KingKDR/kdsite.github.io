@@ -1,289 +1,328 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>PORTPOLIO</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="back.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Welcome</title>
 </head>
 
-
 <body>
-
-    <!-- header
-    ================================================== -->
-    <header class="header">
-
-        <div class="header-logo">
-            <a href="main.html"><img src="100.png" class="logo" alt="Homepage"></a>
+    <header>
+        <div>
+            <img src="kdlogo.png" alt="logo">
         </div>
+        <div class="head-nav">
+            <nav>
+                <div class="mobile-nav-button">
+                    <button id="mobileNavToggle" aria-label="Toggle Navigation">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <script>
+            document.getElementById("mobileNavToggle").addEventListener("click", function () {
+                document.querySelector(".nav-list").classList.toggle("show");
+            });
+            document.getElementById("mobileNavToggle").addEventListener("click", function () {
+                document.querySelector("header").classList.toggle("open");
+            });
+            const toggleButton = document.getElementById("mobileNavToggle");
+            const lines = toggleButton.querySelectorAll(".line");
 
-        <nav class="nav">
-            <ul>
-                <li><a class="active" href="#home" title="home">Home</a></li>
-                <li><a class="" href="#about" title="about">About</a></li>
-                <li><a class="" href="#project" title="works">Project</a></li>
-                <li><a class="" href="#contact" title="contact">Contact</a></li>
-            </ul>
-        </nav>
-
+            toggleButton.addEventListener("click", () => {
+                lines.forEach(line => line.classList.toggle("open"));
+            });
+        </script>
     </header>
 
+    <section class="home" id="home">
+        <div class="home-content">
 
-    <!-- Home
-    ================================================== -->
-    <a id="home">
-        <section class="home">
-            <div class="home-content">
-
-                <div>
-
-                    <h3>Hello There</h3>
-
-                    <h1>
-                        I am Karan Desai. <br>
-                        I am a Python Developer & Web <br>
-                        designer based in nowhere.
-                    </h1>
-
-                    <div class="home-opt">
-                        <a href="#project"> Latest Projects</a>
-                        <!-- <br> -->
-                        <a href="#about">More About Me</a>
-                    </div>
-
-                    <div>
-                        <a href="#about">
-                            <span>Scroll Down</span>
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <ul class="home-social">
-                <li>
-                    <a href="#"><span>Facebook</span></a>
-                </li>
-                <li>
-                    <a href="#"><span>Twiiter</span></a>
-                </li>
-                <li>
-                    <a href="#"><span>Instagram</span></a>
-                </li>
-                <li>
-                    <a href="#"><span>Linkdin</span></a>
-                </li>
-                <li>
-                    <a href="#"><span>Github</span></a>
-                </li>
-            </ul>
-
-        </section>
-    </a>
-
-    <!-- About
-    ================================================== -->
-
-    <a id="about">
-        <section class="about">
-
-            <div class="about-title">
-                <h3>About</h3>
-                <h1>More About Me</h1>
-                <p class="about-p">Karan is a versatile web designer due to his extensive history in graphic and web
-                    design. His dedication to continuously learning about new web design trends and concepts has made
-                    him a valuable member of the team. With eight years of experience and a master's in web design, his
-                    expertise can help customers modernize with websites and appeal to expanding customer populations.
-                </p>
-            </div>
-
-            <div class="about-me">
-                <div>
-                    <h3>Hello World</h3>
-                    <p>more Bakwas</p>
-                    <p>more Bakwas</p>
-                </div>
-                <div>
-                    <h3>I've Got Some Good Skills</h3>
-
-                    <ul class="skill-bars">
-                        <li>
-                            <div>*****</div>
-                            <strong>HTML5</strong>
-                        </li>
-                        <li>
-                            <div>****</div>
-                            <strong>CSS3</strong>
-                        </li>
-                        <li>
-                            <div>*****</div>
-                            <strong>PYTHON</strong>
-                        </li>
-                        <li>
-                            <div>****</div>
-                            <strong>JAVA</strong>
-                        </li>
-                        <li>
-                            <div>*****</div>
-                            <strong>SQL</strong>
-                        </li>
-                    </ul>
+            <div class="header">
+                <h1 class="itl">Hello There</h1>
+                <h1 class="httl">I'm Karan Desai,</h1>
+                <h2>An aspiring programmer and IT enthusiast.</h2>
+                <p>Aspiring Programmer | IT Enthusiast | Creating Digital Solutions with Code</p>
+                <div class="home-opt">
+                    <a href="#project" class="glowing-button">Latest Projects</a>
+                    <a href="#about" class="glowing-button">About Me</a>
                 </div>
             </div>
-
-            <div class="about-btn">
-                <div class="about-btn1">
-                    <a class="about-a1" href="#">Download CV</a>
-                </div>
-                <div class="about-btn2">
-                    <a class="about-a2" href="#">Hire Me</a>
-                </div>
+            <div class="profile">
+                <img src="catbg.png" alt="">
             </div>
-
-            <div class="work">
-                <div>
-                    <h3>Work Experience</h3>
-                </div>
-
-                <div>
-                    <h2>Fresher</h2>
-                </div>
-                <div>
-                    <h1>Looking For Job</h1>
-                </div>
-            </div>
-        </section>
-    </a>
-
-    <!-- Projects
-    ================================================== -->
-    <a id="project">
-        <section class="project">
-            <div>
-                <div>
-                    <h3>PORTFOLIO</h3>
-                    <h1>See My Latest Project</h1>
-                </div>
-            </div>
-
-            <div class="pro">
-                <div class="proname">
-                    <h4>Obstacle Handling Bot</h4>
-                    <p>Project Details</p>
-                    <a href="#"></a>
-                    <div>
-                        <img src="" alt="Project_1">
-                    </div>
-                </div>
-                <div class="proname">
-                    <h4>Land Use Land Cover</h4>
-                    <p>Project Details</p>
-                    <a href="#"></a>
-                    <div>
-                        <img src="" alt="Project_2">
-                    </div>
-                </div>
-                <div class="proname">
-                    <h4>Personal A.I.</h4>
-                    <p>Project Details</p>
-                    <a href="#">Github</a>
-                    <div>
-                        <img src="" alt="Project_3">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </a>
-
-    <!-- Contact
-    ================================================== -->
-    <a id="contact">
-        <section class="contact">
-            <div>
-                <h3>Contact</h3>
-                <h1>Say Hello.</h1>
-                <p>If you have any quiries, You are free to contact me.</p>
-            </div>
-
-            <div>
-                <div>
-                    <form action="">
-
-                        <fieldset>
-                            <div>
-                                <input type="text" placeholder="Name">
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Email">
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Subject">
-                            </div>
-                            <div>
-                                <textarea name="Message" id="" cols="50" rows="10"></textarea>
-                            </div>
-                        </fieldset>
-
-                    </form>
-                </div>
-            </div>
-        </section>
-    </a>
-
-
-    <!-- Footer
-    ================================================== -->
-    <footer class="footer">
-        <div class="row">
-            <div class="col-full">
-
-                <div class="footer-logo">
-                    <a class="footer-site-logo" href="#0"><img src="100.png" alt="Homepage"></a>
-                </div>
-                <div>
-                    <ul class="footer-social">
-                        <li><a href="#0">
-                                <i class="im im-facebook" aria-hidden="true"></i>
-                                <span>Facebook</span>
-                            </a></li>
-                        <li><a href="#0">
-                                <i class="im im-twitter" aria-hidden="true"></i>
-                                <span>Twitter</span>
-                            </a></li>
-                        <li><a href="https://instagram.com/kingkd.ig?igshid=YmMyMTA2M2Y=">
-                                <i class="im im-instagram" aria-hidden="true"></i>
-                                <span>Instagram</span>
-                            </a></li>
-                        <li><a href="#0">
-                                <i class="im im-behance" aria-hidden="true"></i>
-                                <span>Linkdin</span>
-                            </a></li>
-                        <li><a href="#0">
-                                <i class="im im-pinterest" aria-hidden="true"></i>
-                                <span>Github</span>
-                            </a></li>
-                    </ul>
-                </div>
+            <div class="home-social">
+                <a href="#"><i class="fab fa-github fa-lg" style="color: #ffffff;"></i></a>
+                <a href="https://www.instagram.com/kingkd.ig/" target="_blank"><i class="fab fa-instagram fa-lg"
+                        style="color: #ffffff;"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-lg" style="color: #ffffff;"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-lg" style="color: #ffffff;"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-lg" style="color: #ffffff;"></i></a>
             </div>
         </div>
-        <div class="">
-            <div class="">
-                <span>© Copyright KING 2023</span>
-                <span>Design by <a href="#">Karan Desai</a></span>
+    </section>
+
+    <section id="project">
+        <main class="promain">
+            <div class="protitle">
+                <h2 class="itl">Project</h2>
+                <p>From Ideas to Reality: <br>Showcasing My Project Achievement</p>
+            </div>
+            <div class="container scroll-1">
+                <div class="card">
+                    <div class="card__image">
+                        <div class="tlt">
+                            <div class="card__title">
+                                <h3>LULC <br> Atomatic Land Use Land Cover</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__describe">
+                            Land Use Land Cover it is an university sanction project. As I am a Programing Enthusiast,
+                            It was my responsibility for idealize, Design and Create Solution for geographical land
+                            identification using python programming langauge with the help of it image processing
+                            libraries like OpenCV, matplotlib, Image, etc. I use Flask which is a python framework for
+                            Application Programming Interface. it is hosted on pythonanywhere.com
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image">
+                        <div class="tlt">
+                            <div class="card__title">
+                                <h3>CRUD <br> Web Application With Spring Boot</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__describe">
+                            This is my first project in java. After exploring the java and spring boot framework, I
+                            implemented core java knowledge along with spring boot to create a CRUD web application. In
+                            this project I create a student database with its attributes which are directly taken from
+                            database. In this project I use HTML, CSS, Core JAVA and Spring boot. In Spring boot I use
+                            dependacies which are JPA, Thymeleaf, MySQL Connector etc.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image">
+                        <div class="tlt">
+                            <div class="card__title">
+                                <h3>A I <br> Artificial Intelligient Assistance</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__describe">
+                            This is my personal project in python. I create an assistant using python libraries. It was
+                            a console project completely based on python. The main purpose of the AI assistant was to
+                            communicate with user through voice. It uses speech recognition for voice detection and
+                            pyttsx3 which is an offline python library used to convert text to speech. Through voice
+                            communication the AI can get your details and store it in SQLite database.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image">
+                        <div class="tlt">
+                            <div class="card__title">
+                                <h3>ROBOT <br> Obstacle Detection & Avoiding Robot</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__describe">
+                            This is my college project and it was a core project, the main objective of the project was
+                            to create a robot which is capabale of detection of obstacle in its path. For obstacle
+                            detection we use ultrasonic sensor. It has four BO motors for movement and a servo motor for
+                            movement of the ultrasonic sensor. The entire system was controlled by the Arduino Uno 3 and
+                            the motors where controlled by motor driver. The whole system is battery operated.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="dots-container">
+                <!-- Dots will be dynamically generated here -->
+            </div>
+            <style>
+                /* ... (your existing CSS) ... */
+
+                .dots-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+                }
+
+                .dot {
+                    width: 10px;
+                    height: 10px;
+                    background-color: #f9f9f9;
+                    border-radius: 50%;
+                    margin: 0 5px;
+                    transition: background-color 0.3s;
+                }
+
+                .dot.active {
+                    background-color: #f9f9f9;
+                }
+            </style>
+            <script>
+                const cardsContainer = document.querySelector('.container.scroll-1');
+                const dotsContainer = document.querySelector('.dots-container');
+
+                // Create dots based on the number of cards
+                for (let i = 0; i < cardsContainer.children.length; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    dotsContainer.appendChild(dot);
+
+                    // Add event listener to scroll to corresponding card when dot is clicked
+                    dot.addEventListener('click', () => {
+                        cardsContainer.scrollTo({
+                            left: cardsContainer.children[i].offsetLeft,
+                            behavior: 'smooth'
+                        });
+                    });
+                }
+
+                // Track the active card and update active dot
+                cardsContainer.addEventListener('scroll', () => {
+                    const scrollLeft = cardsContainer.scrollLeft;
+                    for (let i = 0; i <= cardsContainer.children.length; i++) {
+                        if (scrollLeft >= cardsContainer.children[i].offsetLeft) {
+                            dotsContainer.children[i].classList.add('active');
+                            for (let j = 0; j < i; j++) {
+                                dotsContainer.children[j].classList.remove('active');
+                            }
+                        }
+                    }
+                });
+
+            </script>
+        </main>
+    </section>
+
+    <section id="about">
+        <main class="about-main">
+            <h2 class="itl">About Me</h2>
+            <div class="details">
+                <p>Welcome to my portfolio! <br>
+                    I am a fresher with a strong passion for programming and a keen interest in
+                    the IT industry.
+                    My journey in the world of technology has been an exciting one, filled with continuous
+                    learning and exploration.</p>
+            </div>
+            <br>
+            <h2 class="hskill">My Skills</h2>
+            <div class="skill">
+                <div class="containerskill">
+                    <div class="cardskill">
+                        <h2>Frontend</h2>
+                        <p>Showcasing skills related to HTML, CSS for creating user interfaces.</p>
+                    </div>
+                    <div class="cardskill">
+                        <h2>Backend</h2>
+                        <p>Showcasing skills related to server-side programming using languages like Python, JAVA.</p>
+                    </div>
+                    <div class="cardskill">
+                        <h2>Framework</h2>
+                        <p>Showcasing skills related to using frameworks like Springboot, Flask and Pyscript for
+                            efficient development.</p>
+                    </div>
+                    <div class="cardskill">
+                        <h2>Database</h2>
+                        <p>Showcasing skills related to Database using DBMS like MySQL, Oracle and SQLite for
+                            efficient data management.</p>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="btdwn">
+                <a href="resume.pdf" download><button class="bttn"> Download Resume </button></a>
             </div>
 
-            <div class="">
-                <a class="" title="Back to Top" href="#top">Scroll Top</a>
+        </main>
+    </section>
+
+    <section id="contact">
+        <h2 class="itl">Contact Me</h2>
+        <p>Feel free to get in touch with me!</p>
+
+        <div class="cont">
+            <div class="contact-form">
+                <form id="contact-form"
+                    action="https://forms.un-static.com/forms/98a9d5915254ed2cec30fac224a16792a0d300ce" method="POST">
+                    <fieldset>
+                        <div>
+                            <input type="text" name="name" id="name" placeholder="Name">
+                        </div>
+                        <div>
+                            <input type="text" name="email" id="email" placeholder="Email">
+                        </div>
+                        <div>
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                        </div>
+                        <div>
+                            <textarea id="message" name="message" cols="50" rows="5"
+                                placeholder="How Can I Help You!"></textarea>
+                        </div>
+                        <button class="glowing-btn2" type="submit">Submit</button>
+                    </fieldset>
+                </form>
+
             </div>
+
+            <div class="contact-section">
+
+                <div class="contact-details">
+
+                    <div class="contact-details-tlt">
+                        <p>Email</p>
+                        <p>Phone</p>
+                        <p>Location</p>
+                    </div>
+                    <div class="contact-details-data">
+                        <p>: karandesai.ig@gmail.com</p>
+                        <p>: +91 9834461556</p>
+                        <p>: Pune, India</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </footer>
-
+        <div class="none">
+            <h3>connect with me</h3>
+        </div>
+        <div class="cont-social">
+            <a href="#"><i class="fab fa-github fa-lg" style="color: #ffffff;"></i></a>
+            <a href="https://www.instagram.com/kingkd.ig/" target="_blank"><i class="fab fa-instagram fa-lg"
+                    style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-lg" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-lg" style="color: #ffffff;"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-lg" style="color: #ffffff;"></i></a>
+        </div>
+        <footer>
+            <p>&copy; 2023 Karan A Desai. All rights reserved.</p>
+        </footer>
+    </section>
 
 </body>
 
